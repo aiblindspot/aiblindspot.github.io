@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>AI Blindspot - Purpose</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="stylesheets/foundation.min.css">
+       <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+
+  <script src="javascripts/modernizr.foundation.js"></script>
+  
+  <link rel="stylesheet" href="ligature.css">
+  
+  <!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<!-- ######################## Main Menu ######################## -->
+ 
+<nav>
+
+    <div class="twelve columns header_nav">
+    <div class="row">
+     
+       <ul id="menu-header" class="nav-bar horizontal">
+       
+        <li><a href="index.html">Home</a></li>
+     
+        <li class="has-flyout">
+          <a href="#">Blindspots</a><a href="#" class="flyout-toggle"></a>
+           <ul class="flyout"><!-- Flyout Menu -->
+             <li class="has-flyout"><a href="purpose.html">Purpose</a></li>
+             <li class="has-flyout"><a href="representative_data.html">Representative Data</a></li>
+             <li class="has-flyout"><a href="abusability.html">Abusability</a></li>
+             <li class="active" class="has-flyout"><a href="privacy.html">Privacy</a></li>             
+             <li class="has-flyout"><a href="discrimination_by_proxy.html">Discrimination by Proxy</a></li>
+             <li class="has-flyout"><a href="explanability.html">Explanability</a></li>
+             <li class="has-flyout"><a href="optimization_criteria.html">Optimization Criteria</a></li>
+             <li class="has-flyout"><a href="generalization_error.html">Generalization Error</a></li>
+             <li class="has-flyout"><a href="right_to_contest.html">Right to Contest</a></li>
+           </ul> 
+         </li><!-- END Flyout Menu -->
+
+         <li class=""><a href="tiles.html">Cards</a></li>
+     
+       </ul>
+       
+       <script type="text/javascript">
+        //<![CDATA[
+        $('ul#menu-header').nav-bar();
+         //]]>
+       </script>
+       
+     </div>  
+     </div>
+     
+</nav><!-- END main menu -->
+        
+<!-- ######################## Header ######################## -->
+     
+    <header>
+       
+            <div class="row">
+            
+    <article>
+            
+             <div class="twelve columns">
+                 <h1>Privacy </h1>
+                      <p class="excerpt">An algorithm’s performance depends on the metric selected for evaluation. It is important to choose metrics that capture the desired outcome. For example, when scanning for cancer, we want to minimize false negatives, but in spam filtering we want to minimize false positives. </p>    
+             </div>
+             
+    </article>
+    
+    
+            </div>
+            
+    </header>
+      
+<!-- ######################## Section ######################## -->
+
+<section class="section_light">
+
+      
+      <div class="row">
+
+          <h2>Have you considered?</h2>
+          <p>While it will not be possible to select the ‘perfect’ metric, it will be helpful to monitor a set of metrics that quantify the models’ performance across several dimensions. The practitioner will then have to make sure to balance the various metrics during the training process.
+          <h2>Take a look</h2>
+          <a href="https://pdfs.semanticscholar.org/6174/3124c2a4b4e550731ac39508c7d18e520979.pdf">A Review on Evaluation Metrics For Data Classification Evaluations</a>
+
+
+          <h2>Have a conversation</h2>
+          <ul style="margin-left:20px">
+          <li>Domain experts</li>
+          <li>Business partners</li>
+          </ul>
+          <h2>Case study</h2>
+          <p>ABC Widgets is building a candidate sourcing system and has overarching goals of diversity and long term employee retention. While most standard machine learning methods rely on evaluation metrics such as area under the ROC curve or accuracy, it is important for the implementation team to work closely with stakeholders to understand how to encode meaningful business metrics. A machine learning system might need a custom metric that not only maximizes accuracy, but also captures the diversity of the predictions. These custom metrics depend on domain expertise and application awareness.
+          
+
+      </div>
+      
+      
+</section>
+
+<!-- ######################## Footer ######################## -->  
+      
+<footer>
+
+      <div class="row">
+      
+          <div class="twelve columns footer">
+              <a href="http://twitter.com/dieterarno" class="lsf-icon" style="font-size:16px; margin-right:15px" title="twitter">Twitter</a> 
+              <a href="http://csstemplateheaven.com/csstemplateheaven" class="lsf-icon" style="font-size:16px; margin-right:15px" title="facebook">Facebook</a>
+              <a href="http://csstemplateheaven.com/csstemplateheaven" class="lsf-icon" style="font-size:16px; margin-right:15px" title="pinterest">Pinterest</a>
+              <a href="http://twitter.com/dieterarno" class="lsf-icon" style="font-size:16px" title="instagram">Instagram</a>
+          </div>
+          
+      </div>
+
+</footer>		  
+
+<!-- ######################## Scripts ######################## --> 
+
+    <!-- Included JS Files (Compressed) -->
+    <script src="javascripts/foundation.min.js" type="text/javascript"></script> 
+    <!-- Initialize JS Plugins -->
+     <script src="javascripts/app.js" type="text/javascript"></script>
+</body>
+</html>
