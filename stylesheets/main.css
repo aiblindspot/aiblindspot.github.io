@@ -119,8 +119,8 @@ h1,h2,h3,h4 {font-family:'Open Sans Condensed',sans-serif; font-weight: normal; 
 /* END Frontpage sections */
 
 
-.heading_supersize {font-size: 128px; text-align:center; font-weight: normal; line-height: 150px; margin:0 0 10px; color: #212121}
-.heading_largesize {font-size: 34px; text-align:; font-weight: normal}
+.heading_supersize {font-size: 128px; text-align:center; font-weight: normal; margin:0px; color: #212121}
+.heading_largesize {font-size: 34px; text-align:center; font-weight: normal}
 
 .dropcap_red, 
 .dropcap_black {  
