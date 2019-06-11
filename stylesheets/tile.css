@@ -67,16 +67,6 @@ body {
   margin: 1rem;
   position: relative;
 }
-@media screen and (max-width: 800px) {
-  .card {
-    width: calc(50% - 2rem);
-  }
-}
-@media screen and (max-width: 500px) {
-  .card {
-    width: 100%;
-  }
-}
 
 div.icon > img {
   display: block;
@@ -88,9 +78,39 @@ div.icon > img {
 }
 
 .front div {
+  font-size: 28px;
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
   height: 25%;
   color: #000;
   align-self: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+  .front div {
+    height: 15%;
+  }
+  div.icon > img {
+    transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+  }
+}
+@media screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+  .front div {
+    height: 15%;
+  }
+  div.icon > img {
+    transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+  }
 }
 
 .front,
@@ -131,9 +151,9 @@ div.icon > img {
   right: 0;
   bottom: 0;
   /*background: linear-gradient(135deg, #1a9be6, #1a57e6);*/
-  /*background: linear-gradient(135deg, #00084B, #000);*/
+  /*background: linear-gradient(135deg, #fff, #1a9be6);*/
   background: #fff;
-  opacity: .9;
+  opacity: .95;
   z-index: -1;
 }
 .card:hover .front {
