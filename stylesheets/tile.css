@@ -156,10 +156,10 @@ div.icon > img {
   opacity: .95;
   z-index: -1;
 }
-.card:hover .front {
+.card:hover .front, .card:active .front  {
   transform: rotateY(180deg);
 }
-.card:nth-child(even):hover .front {
+.card:nth-child(even):hover .front, .card:nth-child(even):active .front  {
   transform: rotateY(-180deg);
 }
 
@@ -175,7 +175,7 @@ div.icon > img {
   box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
   background-color: rgba(26, 87, 230, 0.25);
 }
-.card:hover .back {
+.card:hover .back, .card:active .back{
   transform: rotateY(0deg);
 }
 .card:nth-child(even) .back {
@@ -188,7 +188,7 @@ div.icon > img {
 /*  box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);*/
 /*  background-color: rgba(230, 26, 60, 0.25);*/
 }
-.card:nth-child(even):hover .back {
+.card:nth-child(even):hover .back, .card:nth-child(even):active .back {
   transform: rotateY(0deg);
 }
 
@@ -222,10 +222,10 @@ div.icon > img {
   left: 10px;
   top: 16px;
 }
-.button:hover {
+.button:hover{
   transform: translateZ(55px);
 }
-.button:hover:before {
+.button:hover:before{
   transform: translateZ(-55px);
 }
 .button:active {

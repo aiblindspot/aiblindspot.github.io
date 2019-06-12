@@ -591,6 +591,9 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 		font-size: 12px;
 		padding: 40px 10px 30px 14px;
 	}
+
+	.footer_left {text-align:center; padding: 10px 0}
+    .footer_right {text-align:center; padding: 10px 0}
 }
 
 @media screen and (max-width: 740px){
@@ -600,6 +603,9 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 	.mi-slider nav {
 		top: 220px;
 	}
+    
+    .footer_left {text-align:center; padding: 10px 0}
+    .footer_right {text-align:center; padding: 10px 0}
 }
 
 @media screen and (max-width: 490px){ 
@@ -627,5 +633,8 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 	.mi-slider nav {
 		display: none;
 	}
+
+	.footer_left {text-align:center; padding: 10px 0}
+    .footer_right {text-align:center; padding: 10px 0}
 }
 

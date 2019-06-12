@@ -1,6 +1,5 @@
-
 /* SECTION GENERAL */
-section {
+section#cohort {
     padding: 0 10%;
     min-height: 20vh;
 }
@@ -61,5 +60,55 @@ section {
     max-height: 25px;
     max-width: 25px;
     margin: 10px 20px 10px 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  section#cohort {
+    padding: 0 0;
+    min-height: 20vh;
+}
+#cohort div.profile img.prof {
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    float: none;
+}
+#cohort div.profile {
+    clear: both;
+    margin: 3% 0;
+    height: 100%;
+    text-align: center;
+}
+#cohort div.profile p {
+    font-family: "EB Garamond", Garamond;
+    font-size: 20px;
+    margin: 0 5% 0 5%;
+    text-align:left;
+}
+}
+@media screen and (max-width: 500px) {
+  section#cohort {
+    padding: 0 0;
+    min-height: 20vh;
+}
+#cohort div.profile img.prof {
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    float: none;
+}
+#cohort div.profile {
+    clear: both;
+    margin: 3% 0;
+    height: 100%;
+    text-align: center;
+}
+#cohort div.profile p {
+    font-family: "EB Garamond", Garamond;
+    font-size: 20px;
+    margin: 0 5% 0 5%;
+    text-align:left;
+}
 }
 
