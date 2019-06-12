@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'LigatureSymbols';
+    src: url('../fonts/LigatureSymbols-2.05.eot');
+    src: url('../fonts/LigatureSymbols-2.05.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LigatureSymbols-2.05.woff') format('woff'),
+         url('../fonts/LigatureSymbols-2.05.ttf') format('truetype'),
+         url('../fonts/LigatureSymbols-2.05.svg#LigatureSymbols') format('svg');
+    src: url('../fonts/LigatureSymbols-2.05.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*html {
   font-size: 18px;
   line-height: 1.5;
@@ -80,7 +92,8 @@ div.icon > img {
 .front div {
   font-size: 28px;
   font-weight: 800;
-  font-family: "Nunito Sans", sans-serif;
+  /*font-family: "Nunito Sans", sans-serif;*/
+  font-family:'Open Sans Condensed',sans-serif;
   height: 25%;
   color: #000;
   align-self: flex-end;
@@ -140,7 +153,6 @@ div.icon > img {
   font-weight: 600;
   color: #fff;
   overflow: hidden;
-  font-family: Poppins, sans-serif;
 }
 .front:before {
   position: absolute;
@@ -181,14 +193,59 @@ div.icon > img {
 .card:nth-child(even) .back {
   transform: rotateY(180deg);
 }
-.card:nth-child(even) .back .button {
+/*.card:nth-child(even) .back .button {
   background: linear-gradient(135deg, #e61a80, #e61a3c);
-}
+}*/
 .card:nth-child(even) .back .button:before {
-  box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);
-  background-color: rgba(230, 26, 60, 0.25);
+/*  box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);*/
+/*  background-color: rgba(230, 26, 60, 0.25);*/
 }
 .card:nth-child(even):hover .back {
   transform: rotateY(0deg);
 }
+
+
+.button {
+  transform: translateZ(40px);
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-weight: bold;
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 100px;
+  font: inherit;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 300ms ease;
+}
+.button:before {
+  transition: 300ms ease;
+  position: absolute;
+  display: block;
+  content: '';
+  transform: translateZ(-40px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  border-radius: 100px;
+  left: 10px;
+  top: 16px;
+}
+.button:hover {
+  transform: translateZ(55px);
+}
+.button:hover:before {
+  transform: translateZ(-55px);
+}
+.button:active {
+  transform: translateZ(20px);
+}
+.button:active:before {
+  transform: translateZ(-20px);
+  top: 12px;
+}
+
 
