@@ -113,7 +113,7 @@ p {color: #333}
 .welcome_text {font-size: 32px; margin-bottom: 0; text-align:center; font-weight: normal; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic}
 .excerpt {font-size: 24px; margin-bottom: 0; font-weight: normal; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic}
 
-h1,h2,h3,h4,h5,h6 {font-family:'Open Sans Condensed',sans-serif; font-weight: normal; color: #333; margin: 20px 0}
+h1,h2,h3,h4,h5,h6 {font-family:'Open Sans Condensed',sans-serif; font-weight: 800; color: #333; margin: 20px 0}
 /*h1,h2,h3,h4 {font-family:'CircularStd',sans-serif; font-weight: normal; color: #333; margin: 20px 0}*/
 
 /* sections */

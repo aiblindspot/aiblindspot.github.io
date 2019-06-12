@@ -1,0 +1,65 @@
+
+/* SECTION GENERAL */
+section {
+    padding: 0 10%;
+    min-height: 20vh;
+}
+
+/* SECTION: cohort */
+
+#cohort
+{
+    min-height: 30vh;
+}
+
+#cohort div.profile img.prof {
+    margin: 10px 50px 50px 0px;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+#cohort div.profile {
+    clear: both;
+    margin: 3% 0;
+    height: 100%;
+}
+
+#cohort div.profile h4 {
+    font-family: 'Open Sans Condensed',sans-serif;
+    font-size: 30px;
+    margin: 20px 0 20px 0;
+}
+
+#cohort div.profile p {
+    font-family: "EB Garamond", Garamond;
+    font-size: 20px;
+    margin: 0 0 0 250px;
+}
+
+#people #cohort ul, ul.cohortlist{
+    list-style-type: none;
+    -webkit-column-count: 3;
+    -moz-column-count: 3; 
+    column-count: 3; 
+    column-width: 200px;
+}
+
+#people #cohort ul li, ul.cohortlist li {
+    margin: 0 0 0 30px;
+    font-family: "EB Garamond", Garamond;
+    font-size: 20px;
+    display: block;
+    padding: 5px 0 5px 0;
+}
+
+#cohort p.socialmedia {
+    margin: 10px 0 0 0;
+}
+
+#cohort p.socialmedia img {
+    max-height: 25px;
+    max-width: 25px;
+    margin: 10px 20px 10px 0;
+}
+
