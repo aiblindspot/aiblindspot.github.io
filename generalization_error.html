@@ -1,155 +1,292 @@
 <!DOCTYPE html>
-
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8" />
 
+<head>
+
+  <meta charset="utf-8" />
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>AI Blindspot - Purpose</title>
-  
-  <!-- Included CSS Files (Uncompressed) -->
-  <!--
-  <link rel="stylesheet" href="stylesheets/foundation.css">
-  -->
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
+
+  <title>Generalization Error in AI Blindspot - A Discovery Process for preventing, detecting, and mitigating bias in AI systems</title>
   
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="stylesheets/foundation.min.css">
-       <link rel="stylesheet" href="stylesheets/main.css">
-  <link rel="stylesheet" href="stylesheets/app.css">
-
-  <script src="javascripts/modernizr.foundation.js"></script>
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="stylesheets/tile.css">
+  <link rel="stylesheet" href="stylesheets/ligature.css">
   
-  <link rel="stylesheet" href="ligature.css">
-  
-  <!-- Google fonts -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
-
-  <!-- IE Fix for HTML5 Tags -->
-  <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
 </head>
-
-<body>
-
-<!-- ######################## Main Menu ######################## -->
- 
-<nav>
-
-    <div class="twelve columns header_nav">
-    <div class="row">
-     
-       <ul id="menu-header" class="nav-bar horizontal">
-       
-        <li><a href="index.html">Home</a></li>
-     
-        <li class="has-flyout">
-          <a href="#">Blindspots</a><a href="#" class="flyout-toggle"></a>
-           <ul class="flyout"><!-- Flyout Menu -->
-             <li class="has-flyout"><a href="purpose.html">Purpose</a></li>
-             <li class="has-flyout"><a href="representative_data.html">Representative Data</a></li>
-             <li class="has-flyout"><a href="abusability.html">Abusability</a></li>
-             <li class="has-flyout"><a href="privacy.html">Privacy</a></li>             
-             <li class="has-flyout"><a href="discrimination_by_proxy.html">Discrimination by Proxy</a></li>
-             <li class="has-flyout"><a href="explanability.html">Explanability</a></li>
-             <li class="has-flyout"><a href="optimization_criteria.html">Optimization Criteria</a></li>
-             <li class="active" class="has-flyout"><a href="generalization_error.html">Generalization Error</a></li>
-             <li class="has-flyout"><a href="right_to_contest.html">Right to Contest</a></li>
-           </ul> 
-         </li><!-- END Flyout Menu -->
-     
-
-         <li class=""><a href="tiles.html">Cards</a></li>
-     
-       </ul>
-       
-       <script type="text/javascript">
-        //<![CDATA[
-        $('ul#menu-header').nav-bar();
-         //]]>
-       </script>
-       
-     </div>  
-     </div>
-     
-</nav><!-- END main menu -->
-        
+<body style="background-color: white">
+    
 <!-- ######################## Header ######################## -->
-     
-    <header>
-       
-            <div class="row">
-            
-    <article>
-            
-             <div class="twelve columns">
-                 <h1>Generalization Error</h1>
-                      <p class="excerpt">An algorithm’s performance depends on the metric selected for evaluation. It is important to choose metrics that capture the desired outcome. For example, when scanning for cancer, we want to minimize false negatives, but in spam filtering we want to minimize false positives. </p>    
-             </div>
-             
-    </article>
-    
-    
-            </div>
-            
-    </header>
-      
+        
+        <header  style="background-color:#1F2345;height: 82px">
+              <div style="margin-top:-18px"><a href="index.html"><img src="images/ai_blindspot_logo_white_small_header_80.png" style="align:left;"></a></div>
+        </header>
+        
 <!-- ######################## Section ######################## -->
 
 <section class="section_light">
+            <div class="row">
+                <div class="two columns"></div>  
+                <div class="eight columns" style="align: center;">
+                    <center>
+                        <h2 style="font-weight: bold;font-size:350%;color:#E3C268">Generalization Error</h2>
+                        <div style="font-size:120%;margin-top:-10px;margin-bottom:2px;font-weight: 300"><span style="color:#6CB7B6">Planning</span> &nbsp;&nbsp;&nbsp; <span style="color:#D46E54;font-weight: 300">Building</span> &nbsp;&nbsp;&nbsp; <span style="color:#E3C268;"><b>Deploying</b></span></div>
+                    </center>
+                </div>
+                <div class="two columns"></div>  
+            </div> 
+  <div class="row"> 
 
-      
-      <div class="row">
+  <div class="twelve columns">
+    <center>
+    <div style="font-size:116%;font-weight: 400;line-height: 130%;margin-top:12px;margin-bottom:10px;text-align: left;width:90%">
+      Between building and deploying an AI system, conditions in the world may change or not reflect the context in which the system was designed, such that training data are no longer representative.
+    </div>
+    </center>
+    <div style="margin-bottom:12px;">
+        <center>
+        <img src="images/cards/AI_Cards_Front23.png">
+        <img src="images/cards/AI_Cards_Back23.png">
+        </center>
+    </div>
+</div>
 
-          <h2>Have you considered?</h2>
-          <p>While it will not be possible to select the ‘perfect’ metric, it will be helpful to monitor a set of metrics that quantify the models’ performance across several dimensions. The practitioner will then have to make sure to balance the various metrics during the training process.
-          <h2>Take a look</h2>
-          <a href="https://pdfs.semanticscholar.org/6174/3124c2a4b4e550731ac39508c7d18e520979.pdf">A Review on Evaluation Metrics For Data Classification Evaluations</a>
+</div>
 
+<div class="row">
+        <div class="two columns"></div>  
+        <div class="eight columns" style="align: center;">
+    <h3>Have you considered...?</h3>
+    <div style="margin-left:26px;">
+        <ul style="font-size:100%">
+            <li>Identifying possible shifts in demographics
+            <li>Building a human review process for outliers
+            <li>Determining if the input data and predicted values align with expectations
+            <li>Formulating a plan for sunsetting the model when the model is obsolete or might cause harm
+        </ul>
+    </div> 
+        
+    <h3>Case study</h3>
+    <div style="margin-left:16px;">
+        <p>Facebook’s video platform has been trying to automatically identify and remove mass shooting videos. However, it was unable to catch first-person shooter videos filmed on head-mounted cameras because the training data it had previously used was in the third-person perspective.</p>
+        <ul style="font-size:100%;margin-left:12px;margin-top:-15px">
+            <li><a href="http://fortune.com/2019/04/24/facebook-new-zealand-terrorism-artificial-intelligence-ai/">Facebook Executive Testifies on AI Failure to Detect the Christchurch Mosque Shooting Video</a></li>
+        </ul>
+    </div>
 
-          <h2>Have a conversation</h2>
-          <ul style="margin-left:20px">
-          <li>Domain experts</li>
-          <li>Business partners</li>
-          </ul>
-          <h2>Case study</h2>
-          <p>ABC Widgets is building a candidate sourcing system and has overarching goals of diversity and long term employee retention. While most standard machine learning methods rely on evaluation metrics such as area under the ROC curve or accuracy, it is important for the implementation team to work closely with stakeholders to understand how to encode meaningful business metrics. A machine learning system might need a custom metric that not only maximizes accuracy, but also captures the diversity of the predictions. These custom metrics depend on domain expertise and application awareness.
-          
+    <h3>Have you engaged with...?</h3>
+    <div style="margin-left:26px;">
+        <ul style="font-size:100%">
+            <li>Social scientists
+            <li>Statisticians
+            <li>Affected communities 
+        </ul>
+    </div> 
 
-      </div>
-      
-      
+    <h3>Resources</h3>
+    <div style="margin-left:26px;">
+        <ul style="font-size:100%">
+            <li><a href="https://www.sysml.cc/doc/2019/167.pdf">Data Validation for Machine Learning</a>
+            <li><a href="https://www.researchgate.net/profile/Burak_Turhan/publication/220277766_On_the_dataset_shift_problem_in_software_engineering_prediction_models/links/54e792ce0cf25ba91c797a78/On-the-dataset-shift-problem-in-software-engineering-prediction-models.pdf">On the dataset shift problem in software engineering prediction models</a>
+            <li><a href="http://lab.cccb.org/en/bias-in-a-feedback-loop-fuelling-algorithmic-injustice/">Bias in a Feedback Loop: Fuelling Algorithmic Injustice</a>
+        </ul>
+    </div> 
+
+    <h3>What is missing?</h3>
+    <div style="margin-left:16px;">
+            <div style="margin-top:10px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSddPQ2-klpldUMTjKlE4rYxYtYVbEIuRzvhySAydlMPAIBo3w/viewform?usp=sf_link" class="button primary small radius">Your suggestions</a></div> 
+    </div>
+   </div>
+   <div class="two columns"></div> 
+  </div>
 </section>
 
-<!-- ######################## Footer ######################## -->  
-      
-<footer>
+<!-- ######################## Section ######################## -->
 
-      <div class="row">
-      
-          <div class="twelve columns footer">
-              <a href="http://twitter.com/dieterarno" class="lsf-icon" style="font-size:16px; margin-right:15px" title="twitter">Twitter</a> 
-              <a href="http://csstemplateheaven.com/csstemplateheaven" class="lsf-icon" style="font-size:16px; margin-right:15px" title="facebook">Facebook</a>
-              <a href="http://csstemplateheaven.com/csstemplateheaven" class="lsf-icon" style="font-size:16px; margin-right:15px" title="pinterest">Pinterest</a>
-              <a href="http://twitter.com/dieterarno" class="lsf-icon" style="font-size:16px" title="instagram">Instagram</a>
+  <section  class="section_dark" style="background-color: #1F2345">
+      <div class="row"> 
+      <div class="six columns" style="align: left;">
+        <h1 style="color:white;font-size:250%">AI Blindspot Cards</h1>
+      </div>
+      <div class="six columns" style="align: right;">
+          <div align="right">
+              <br><br>
+            <a href="images/AI_Cards_2019.pdf" class="button primary medium radius">Download the Cards &raquo;</a>
+            <br><br>
           </div>
-          
+      </div>
+      <div class="row"> 
       </div>
 
-</footer>		  
 
-<!-- ######################## Scripts ######################## --> 
+<div class="content">
+    <a class="card" href='purpose.html'>
+        <div class="front">
+            <div class="icon"><img src="/images/icons/purpose.png"></div>
+            <div>PURPOSE</div>
+        </div>
+        <div class="back">
+            <div>
+                <p>AI systems should make the world a better place. Defining a shared goal guides decisions across the lifecycle of an algorithmic decision-making system, promoting trust amongst individuals and the public.</p>
+                <button class="button" onclick="window.location.href='purpose.html';">View Card</button>
+            </div>
+        </div>
+    </a>
+    <a class="card" href='representative_data.html'>
+        <div class="front">
+            <div class="icon"><img src="/images/icons/representative_data.png"></div>
+            <div>REPRESENTATIVE DATA</div>
+        </div>
+        <div class="back">
+            <div>
+                <p>For an algorithm to be effective, its training data must be representative of the communities that it may impact. The way that you collect and organize data will benefit certain groups while excluding or harming others.</p>
+                <button class="button" onclick="window.location.href='representative_data.html';">View Card</button>
+            </div>
+        </div>
+    </a>
+    <a class="card" href='abusability.html'>
+        <div class="front">
+            <div class="icon"><img src="/images/icons/abusability.png"></div>
+            <div>ABUSABILITY</div>
+        </div>
+        <div class="back">
+            <div>
+                <p>The designers of an AI system need to anticipate vulnerabilities and dual-use scenarios by modeling how bad actors might hijack and weaponize the system for malicious activity.</p>
+                <button class="button" onclick="window.location.href='abusability.html';">View Card</button>
+            </div>
+        </div>
+    </a>
+    <a class="card" href='privacy.html'>
+        <div class="front">
+            <div class="icon"><img src="/images/icons/privacy.png"></div>
+            <div>PRIVACY</div>
+        </div>
+        <div class="back">
+            <div>
+                <p>AI systems often gather personal information that can invade our privacy. Systems storing confidential data can also be vulnerable to cyberattacks that result in devastating data breaches to access personal information.</p>
+                <button class="button" onclick="window.location.href='privacy.html';">View Card</button>
+            </div>
+        </div>
+    </a>
+    <a class="card" href='discrimination_by_proxy.html'>
+        <div class="front">
+            <div class="icon"><img src="/images/icons/discrimination_by_proxy.png"></div>
+            <div>DISCRIMINATION BY PROXY</div>
+        </div>
+        <div class="back">
+            <div>
+                <p>An algorithm can have an adverse effect on vulnerable populations even without explicitly including protected characteristics. This often occurs when a model includes features that are correlated with these characteristics.</p>
+                <button class="button" onclick="window.location.href='discrimination_by_proxy.html';">View Card</button>
+            </div>
+        </div>
+    </a>
+    <a class="card" href='explanability.html'>
+        <div class="front">
+            <div class="icon"><img src="/images/icons/explainability.png"></div>
+            <div>EXPLAINABILITY</div>
+        </div>
+        <div class="back">
+            <div>
+                <p>The technical logic of algorithms is complex, which make recommendations unclear. People involved in designing and deploying algorithmic systems have a responsibility to explain high-stakes decisions that affect individuals' well-being.</p>
+                <button class="button" onclick="window.location.href='explanability.html';">View Card</button>
+            </div>
+        </div>
+    </a>
+    <a class="card" href='optimization_criteria.html'>
+        <div class="front">
+            <div class="icon"><img src="/images/icons/optimization_criteria.png"></div>
+            <div>OPTIMIZATION CRITERIA</div>
+        </div>
+        <div class="back">
+            <div>
+                <p>There are trade-offs and potential externalities when determining an AI system's metrics for success. It is important to balance performance metrics against the risk of negatively impacting vulnerable populations.</p>
+                <button class="button" onclick="window.location.href='optimization_criteria.html';">View Card</button>
+            </div>
+        </div>
+    </a>
+    <a class="card" href='generalization_error.html'>
+        <div class="front">
+            <div class="icon"><img src="/images/icons/generalization_error.png"></div>
+            <div>GENERALIZATION ERROR</div>
+        </div>
+        <div class="back">
+            <div>
+                <p>Between building and deploying an AI system, conditions in the world may change or not reflect the context in which the system was designed, such that training data are no longer representative.</p>
+                <button class="button" onclick="window.location.href='generalization_error.html';">View Card</button>
+            </div>
+        </div>
+    </a>
+    <a class="card" href='right_to_contest.html'>
+        <div class="front">
+            <div class="icon"><img src="/images/icons/right_to_contest.png"></div>
+            <div>RIGHT TO CONTEST</div>
+        </div>
+        <div class="back">
+            <div>
+                <p>Like any human process, AI systems carry biases that make them subjective and imperfect. The right to contest an algorithmic decision can surface inaccuracies and grant agency to people affected.</p>
+                <button class="button" onclick="window.location.href='right_to_contest.html';">View Card</button>
+            </div>
+        </div>
+    </a>
+</div>
 
-    <!-- Included JS Files (Compressed) -->
-    <script src="javascripts/foundation.min.js" type="text/javascript"></script> 
-    <!-- Initialize JS Plugins -->
-     <script src="javascripts/app.js" type="text/javascript"></script>
+
+      
+    </section>
+      
+
+<!-- ######################## Section ######################## -->
+
+<section class="section_light">
+   
+    <div class="row">
+            <div class="four columns">
+               <h3><b>ABOUT</b></h3>
+                    <span style="font-size: medium">
+                      The AI Blindspot cards were developed by Ania Calderon, Dan Taber, Hong Qu, and Jeff Wen during the Berkman Klein Center and MIT Media Lab’s 2019 <a href="https://bkmla.org/" target="_blank">Assembly program</a>.
+                    </span> 
+            </div>
+             
+             <div class="four columns">
+               <h3><b>COPYRIGHT</b></h3>
+               <center>
+                  <div style="align:center;padding-bottom:6px;"><a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by" target="_blank"><img src="images/1_creative_commons.png"></a></div>
+                </center>
+               <span style="font-size: medium">This work is licensed under a Creative Commons Attribution 4.0 International License.</span>      
+             </div>
+        
+             <div class="four columns">
+                 <h3><b>STAY IN TOUCH</b></h3>
+                 <span style="font-size: medium">
+                    <a href="https://www.instagram.com/aiblindspots/" class="lsf-icon" style="font-size:16px;" title="instagram">Instagram</a> 
+                    <br>
+                    <a href="https://tinyletter.com/aiblindspot" class="lsf-icon" style="font-size:16px" style="font-size:16px;" title="mail">Email Newsletter</a>
+                    <div style="margin-top:10px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSddPQ2-klpldUMTjKlE4rYxYtYVbEIuRzvhySAydlMPAIBo3w/viewform?usp=sf_link" class="button primary small radius">Send Feedback</a></div>    
+                 </span>
+                 
+            </div>
+    </div>
+      <div class="row">
+          <div class="four columns footer_left">
+              <a href="https://www.media.mit.edu/" target="_blank"><img src="images/MIT_ML_Logo.png" /></a>
+          </div>
+          <div class="four columns footer">
+              <a href="https://bkmla.org/" target="_blank"><img src="images/assembly_logo_black.png" /></a>
+              <h4>A project of the <a href="https://bkmla.org/" target="_blank">Assembly Program</a> 2019</h4>
+          </div>
+          <div class="four columns footer_right">
+              <a href="https://cyber.harvard.edu/" target="_blank"><img src="images/bkc_black_logo.png" /></a>
+          </div>
+      </div>
+
 </body>
 </html>

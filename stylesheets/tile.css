@@ -2,18 +2,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'LigatureSymbols';
-    src: url('../fonts/LigatureSymbols-2.05.eot');
-    src: url('../fonts/LigatureSymbols-2.05.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/LigatureSymbols-2.05.woff') format('woff'),
-         url('../fonts/LigatureSymbols-2.05.ttf') format('truetype'),
-         url('../fonts/LigatureSymbols-2.05.svg#LigatureSymbols') format('svg');
-    src: url('../fonts/LigatureSymbols-2.05.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /*html {
   font-size: 18px;
   line-height: 1.5;
