@@ -22,8 +22,22 @@
   <link rel="stylesheet" href="stylesheets/tile.css">
   <link rel="stylesheet" href="stylesheets/ligature.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
 </head>
 <body style="background-color: white">
+
+  <nav class="" style="display: none;">
+    <a href="index.html">
+      <img src="/images/ai_blindspot_all_black_sm.png">
+    </a>
+    <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#cards">Cards</a></li>
+      <li><a href="people.html">Team</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
     
 <!-- ######################## Header ######################## -->
         
@@ -68,11 +82,11 @@
     <h3>Have you considered...?</h3>
     <div style="margin-left:26px;">
         <ul style="font-size:100%">
-            <li>Creating scenarios with hypothetical malicious and innocent bystander personas
-            <li>Conducting “red team” exercises
-            <li>Developing processes for long term mitigation and real-time damage control
-            <li>Engaging sociologists, ethnographers, and political scientists to understand the motivations and incentives that underpin threat models
-            <li>Conjuring up a worst-case scenario that might appear in tomorrow’s headline
+            <li>Creating scenarios with hypothetical malicious and innocent bystander personas</li>
+            <li>Conducting “red team” exercises</li>
+            <li>Developing processes for long term mitigation and real-time damage control</li>
+            <li>Engaging sociologists, ethnographers, and political scientists to understand the motivations and incentives that underpin threat models</li>
+            <li>Conjuring up a worst-case scenario that might appear in tomorrow’s headline</li>
         </ul>
     </div> 
         
@@ -87,19 +101,19 @@
     <h3>Have you engaged with...?</h3>
     <div style="margin-left:26px;">
         <ul style="font-size:100%">
-            <li>Social scientists
-            <li>Subject matter experts 
-            <li>Cybersecurity experts
+            <li>Social scientists</li>
+            <li>Subject matter experts </li>
+            <li>Cybersecurity experts</li>
         </ul>
     </div> 
 
     <h3>Resources</h3>
     <div style="margin-left:26px;">
         <ul style="font-size:100%">
-            <li><a href="https://www.wired.com/story/abusability-testing-ashkan-soltani/">Security Isn't Enough. Silicon Valley Needs 'Abusability' Testing</a>
-            <li><a href="https://greenonions.com/ux-in-the-age-of-abusability-797cd01f6b13">UX in the Age of Abusability</a>
-            <li><a href="https://medium.com/mule-design/a-three-part-plan-to-save-the-world-98653a20a12f">Thinking in Triplicate</a>
-            <li><a href="https://www.nist.gov/cyberframework/framework">NIST Cybersecurity Framework</a>  
+            <li><a href="https://www.wired.com/story/abusability-testing-ashkan-soltani/">Security Isn't Enough. Silicon Valley Needs 'Abusability' Testing</a></li>
+            <li><a href="https://greenonions.com/ux-in-the-age-of-abusability-797cd01f6b13">UX in the Age of Abusability</a></li>
+            <li><a href="https://medium.com/mule-design/a-three-part-plan-to-save-the-world-98653a20a12f">Thinking in Triplicate</a></li>
+            <li><a href="https://www.nist.gov/cyberframework/framework">NIST Cybersecurity Framework</a>  </li>
         </ul>
     </div> 
 
@@ -126,7 +140,6 @@
             <br><br>
           </div>
       </div>
-      <div class="row"> 
       </div>
 
 
@@ -269,10 +282,12 @@
               </center>
              </div>
         
-             <div class="four columns">
+             <div class="four columns" id="contact">
                  <h3><b>STAY IN TOUCH</b></h3>
                  <p style="font-size: medium">
                     <a href="https://www.instagram.com/aiblindspots/" class="lsf-icon" style="font-size:16px;" title="instagram">Instagram</a> 
+                    <br>
+                    <a href="https://twitter.com/aiblindspot" class="lsf-icon" style="font-size:16px" style="font-size:16px;" title="twitter">Twitter</a>
                     <br>
                     <a href="https://tinyletter.com/aiblindspot" class="lsf-icon" style="font-size:16px" style="font-size:16px;" title="mail">Email Newsletter</a>
                     <div style="margin-top:10px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSddPQ2-klpldUMTjKlE4rYxYtYVbEIuRzvhySAydlMPAIBo3w/viewform?usp=sf_link" class="button primary medium radius">Send Feedback</a></div>    
@@ -280,6 +295,8 @@
                  
             </div>
     </div>
+
+</section>
       <div class="row">
           <div class="four columns footer_left">
               <a href="https://www.media.mit.edu/" target="_blank"><img src="images/MIT_ML_Logo.png" /></a>
@@ -292,6 +309,19 @@
               <a href="https://cyber.harvard.edu/" target="_blank"><img src="images/bkc_black_logo.png" /></a>
           </div>
       </div>
+
+    <script>
+
+    $(window).scroll(function () {
+        if ( $(this).scrollTop() > 30 && !$('nav').hasClass('open') ) {
+          $('nav').addClass('open');
+          $('nav').slideDown();
+        } else if ( $(this).scrollTop() <= 30 ) {
+          $('nav').removeClass('open');
+          $('nav').slideUp();
+        }
+    });
+  </script>
 
 </body>
 </html>

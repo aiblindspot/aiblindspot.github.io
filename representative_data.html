@@ -22,8 +22,22 @@
   <link rel="stylesheet" href="stylesheets/tile.css">
   <link rel="stylesheet" href="stylesheets/ligature.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
 </head>
 <body style="background-color: white">
+
+  <nav class="" style="display: none;">
+    <a href="index.html">
+      <img src="/images/ai_blindspot_all_black_sm.png">
+    </a>
+    <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#cards">Cards</a></li>
+      <li><a href="people.html">Team</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
     
 <!-- ######################## Header ######################## -->
         
@@ -68,9 +82,9 @@
     <h3>Have you considered...?</h3>
     <div style="margin-left:26px;">
         <ul style="font-size:100%">
-            <li>Exploring how your data might be incomplete or skewed, or encode historical biases
-            <li>Including diverse voices in the data definition and collection process
-            <li>Partnering with social service agencies for outreach to vulnerable groups
+            <li>Exploring how your data might be incomplete or skewed, or encode historical biases</li>
+            <li>Including diverse voices in the data definition and collection process</li>
+            <li>Partnering with social service agencies for outreach to vulnerable groups</li>
         </ul>
     </div> 
         
@@ -85,18 +99,18 @@
     <h3>Have you engaged with...?</h3>
     <div style="margin-left:26px;">
         <ul style="font-size:100%">
-            <li>Affected communities 
-            <li>Subject matter experts 
-            <li>Civil rights organizations
+            <li>Affected communities </li>
+            <li>Subject matter experts </li>
+            <li>Civil rights organizations</li>
         </ul>
     </div> 
 
     <h3>Resources</h3>
     <div style="margin-left:26px;">
         <ul style="font-size:100%">
-            <li><a href="https://allofus.nih.gov">NIH All of US</a>
-            <li><a href="http://www.nea.org/assets/img/PubThoughtAndAction/TAA_03_04.pdf">How Does Your Positionality Bias Your Epistemology?</a>
-            <li><a href="http://news.mit.edu/2018/study-finds-gender-skin-type-bias-artificial-intelligence-systems-0212">Study finds gender and skin-type bias in commercial artificial-intelligence systems</a>
+            <li><a href="https://allofus.nih.gov">NIH All of US</a></li>
+            <li><a href="http://www.nea.org/assets/img/PubThoughtAndAction/TAA_03_04.pdf">How Does Your Positionality Bias Your Epistemology?</a></li>
+            <li><a href="http://news.mit.edu/2018/study-finds-gender-skin-type-bias-artificial-intelligence-systems-0212">Study finds gender and skin-type bias in commercial artificial-intelligence systems</a></li>
         </ul>
     </div> 
 
@@ -123,7 +137,6 @@
             <br><br>
           </div>
       </div>
-      <div class="row"> 
       </div>
 
 
@@ -266,10 +279,12 @@
               </center>
              </div>
         
-             <div class="four columns">
+             <div class="four columns" id="contact">
                  <h3><b>STAY IN TOUCH</b></h3>
                  <p style="font-size: medium">
                     <a href="https://www.instagram.com/aiblindspots/" class="lsf-icon" style="font-size:16px;" title="instagram">Instagram</a> 
+                    <br>
+                    <a href="https://twitter.com/aiblindspot" class="lsf-icon" style="font-size:16px" style="font-size:16px;" title="twitter">Twitter</a>
                     <br>
                     <a href="https://tinyletter.com/aiblindspot" class="lsf-icon" style="font-size:16px" style="font-size:16px;" title="mail">Email Newsletter</a>
                     <div style="margin-top:10px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSddPQ2-klpldUMTjKlE4rYxYtYVbEIuRzvhySAydlMPAIBo3w/viewform?usp=sf_link" class="button primary medium radius">Send Feedback</a></div>    
@@ -277,6 +292,7 @@
                  
             </div>
     </div>
+</section>
       <div class="row">
           <div class="four columns footer_left">
               <a href="https://www.media.mit.edu/" target="_blank"><img src="images/MIT_ML_Logo.png" /></a>
@@ -289,6 +305,19 @@
               <a href="https://cyber.harvard.edu/" target="_blank"><img src="images/bkc_black_logo.png" /></a>
           </div>
       </div>
+
+    <script>
+
+    $(window).scroll(function () {
+        if ( $(this).scrollTop() > 30 && !$('nav').hasClass('open') ) {
+          $('nav').addClass('open');
+          $('nav').slideDown();
+        } else if ( $(this).scrollTop() <= 30 ) {
+          $('nav').removeClass('open');
+          $('nav').slideUp();
+        }
+    });
+  </script>
 
 </body>
 </html>

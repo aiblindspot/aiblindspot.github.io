@@ -6,6 +6,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142068676-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142068676-1');
+</script>
 
   <meta charset="utf-8" />
   <!-- Set the viewport width to device width for mobile -->
@@ -23,9 +33,22 @@
   <link rel="stylesheet" href="stylesheets/ligature.css">
   <link rel="stylesheet" href="stylesheets/people.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 </head>
 <body style="background-color: white">
+
+  <nav class="" style="display: none;">
+    <a href="index.html">
+      <img src="/images/ai_blindspot_all_black_sm.png">
+    </a>
+    <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#cards">Cards</a></li>
+      <li><a href="people.html">Team</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
     
 <!-- ######################## Header ######################## -->
         
@@ -99,33 +122,36 @@
 <!-- ######################## Section ######################## -->
 
 <section class="section_light">
-   
     <div class="row">
             <div class="four columns">
                <h3><b>ABOUT</b></h3>
-                    <span style="font-size: medium">
-                      The AI Blindspot cards were developed by Ania Calderon, Dan Taber, Hong Qu, and Jeff Wen during the Berkman Klein Center and MIT Media Lab’s 2019 <a href="https://bkmla.org/" target="_blank">Assembly program</a>.
-                    </span> 
+                    <p style="font-size: medium">
+                      The AI Blindspot cards were developed by Ania Calderon, Dan Taber, Hong Qu, and Jeff Wen during the Berkman Klein Center and MIT Media Lab’s <a href="http://bkmla.org/2019/projects.html" target="_blank">2019</a> <a href="https://bkmla.org/" target="_blank">Assembly program</a>.
+                      <br>
+                      <br>
+                      Learn more about the <a href="people.html">team</a>.
+                    </p> 
             </div>
-             
              <div class="four columns">
                <h3><b>COPYRIGHT</b></h3>
-               <center>
-                  <div style="align:center;padding-bottom:6px;"><a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by" target="_blank"><img src="images/1_creative_commons.png"></a></div>
-                </center>
-               <span style="font-size: medium">This work is licensed under a Creative Commons Attribution 4.0 International License.</span>      
+               <p style="font-size: medium">This work is licensed under a Creative Commons Attribution 4.0 International License.</p>      
+              <center>
+                <div style="align:center;padding-bottom:6px;"><a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by" target="_blank"><img src="images/1_creative_commons.png"></a></div>
+              </center>
              </div>
-        
-             <div class="four columns">
+             <div class="four columns" id="contact">
                  <h3><b>STAY IN TOUCH</b></h3>
-                 <span style="font-size: medium">
+                 <p style="font-size: medium">
                     <a href="https://www.instagram.com/aiblindspots/" class="lsf-icon" style="font-size:16px;" title="instagram">Instagram</a> 
                     <br>
+                    <a href="https://twitter.com/aiblindspot" class="lsf-icon" style="font-size:16px" style="font-size:16px;" title="twitter">Twitter</a>
+                    <br>
                     <a href="https://tinyletter.com/aiblindspot" class="lsf-icon" style="font-size:16px" style="font-size:16px;" title="mail">Email Newsletter</a>
-                    <div style="margin-top:10px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSddPQ2-klpldUMTjKlE4rYxYtYVbEIuRzvhySAydlMPAIBo3w/viewform?usp=sf_link" class="button primary small radius">Send Feedback</a></div>    
-                 </span>
+                    <div style="margin-top:10px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSddPQ2-klpldUMTjKlE4rYxYtYVbEIuRzvhySAydlMPAIBo3w/viewform?usp=sf_link" class="button primary medium radius">Send Feedback</a></div>    
+                 </p>
                  
             </div>
+</section>
     </div>
       <div class="row">
           <div class="four columns footer_left">
@@ -139,6 +165,19 @@
               <a href="https://cyber.harvard.edu/" target="_blank"><img src="images/bkc_black_logo.png" /></a>
           </div>
       </div>
+
+    <script>
+
+    $(window).scroll(function () {
+        if ( $(this).scrollTop() > 30 && !$('nav').hasClass('open') ) {
+          $('nav').addClass('open');
+          $('nav').slideDown();
+        } else if ( $(this).scrollTop() <= 30 ) {
+          $('nav').removeClass('open');
+          $('nav').slideUp();
+        }
+    });
+  </script>
 
 </body>
 </html>

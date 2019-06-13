@@ -29,8 +29,22 @@
 }
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
 </head>
+
 <body style="background-color: white" onload="redirect()">
+    <nav class="" style="display: none;">
+    <a href="index.html">
+      <img src="/images/ai_blindspot_all_black_sm.png">
+    </a>
+    <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#cards">Cards</a></li>
+      <li><a href="people.html">Team</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
     
 <!-- ######################## Header ######################## -->
         
@@ -75,10 +89,10 @@
     <h3>Have you considered...?</h3>
     <div style="margin-left:26px;">
         <ul style="font-size:100%">
-            <li>Surveying individuals on whether they comprehend and trust the recommendations made by your model
-            <li>Factoring in the stakes of decisions (e.g., recommending a movie vs. approving a home loan)  
-            <li>Choosing models that are easier to interpret (e.g., logistic regression, random forest)
-            <li>Modeling counterfactual scenarios that would enable individuals to understand what would need to change to receive a desired result
+            <li>Surveying individuals on whether they comprehend and trust the recommendations made by your model</li>
+            <li>Factoring in the stakes of decisions (e.g., recommending a movie vs. approving a home loan)  </li>
+            <li>Choosing models that are easier to interpret (e.g., logistic regression, random forest)</li>
+            <li>Modeling counterfactual scenarios that would enable individuals to understand what would need to change to receive a desired result</li>
         </ul>
     </div> 
         
@@ -93,18 +107,18 @@
     <h3>Have you engaged with...?</h3>
     <div style="margin-left:26px;">
         <ul style="font-size:100%">
-            <li>Affected communities 
-            <li>Legal counsel
-            <li>UX researchers
+            <li>Affected communities </li>
+            <li>Legal counsel</li>
+            <li>UX researchers</li>
         </ul>
     </div> 
 
     <h3>Resources</h3>
     <div style="margin-left:26px;">
         <ul style="font-size:100%">
-            <li><a href="https://arxiv.org/abs/1711.00399">LIME: Explaining the predictions of any machine learning classifier</a>
-            <li><a href="https://pair-code.github.io/what-if-tool/index.html">What-If</a>
-            <li><a href="https://arxiv.org/abs/1711.00399">Causal Explanations Without Opening the Black Box</a>
+            <li><a href="https://arxiv.org/abs/1711.00399">LIME: Explaining the predictions of any machine learning classifier</a></li>
+            <li><a href="https://pair-code.github.io/what-if-tool/index.html">What-If</a></li>
+            <li><a href="https://arxiv.org/abs/1711.00399">Causal Explanations Without Opening the Black Box</a></li>
         </ul>
     </div> 
 
@@ -131,7 +145,7 @@
             <br><br>
           </div>
       </div>
-      <div class="row"> 
+
       </div>
 
 
@@ -274,10 +288,12 @@
               </center>
              </div>
         
-             <div class="four columns">
+             <div class="four columns" id="contact">
                  <h3><b>STAY IN TOUCH</b></h3>
                  <p style="font-size: medium">
                     <a href="https://www.instagram.com/aiblindspots/" class="lsf-icon" style="font-size:16px;" title="instagram">Instagram</a> 
+                    <br>
+                    <a href="https://twitter.com/aiblindspot" class="lsf-icon" style="font-size:16px" style="font-size:16px;" title="twitter">Twitter</a>
                     <br>
                     <a href="https://tinyletter.com/aiblindspot" class="lsf-icon" style="font-size:16px" style="font-size:16px;" title="mail">Email Newsletter</a>
                     <div style="margin-top:10px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSddPQ2-klpldUMTjKlE4rYxYtYVbEIuRzvhySAydlMPAIBo3w/viewform?usp=sf_link" class="button primary medium radius">Send Feedback</a></div>    
@@ -285,6 +301,8 @@
                  
             </div>
     </div>
+
+</section>
       <div class="row">
           <div class="four columns footer_left">
               <a href="https://www.media.mit.edu/" target="_blank"><img src="images/MIT_ML_Logo.png" /></a>
@@ -298,6 +316,18 @@
           </div>
       </div>
 
+    <script>
 
+    $(window).scroll(function () {
+        if ( $(this).scrollTop() > 30 && !$('nav').hasClass('open') ) {
+          $('nav').addClass('open');
+          $('nav').slideDown();
+        } else if ( $(this).scrollTop() <= 30 ) {
+          $('nav').removeClass('open');
+          $('nav').slideUp();
+        }
+    });
+  </script>
+  
 </body>
 </html>

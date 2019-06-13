@@ -225,6 +225,89 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 .footer_left {text-align:right; padding: 50px 0}
 .footer_right {text-align:left; padding: 50px 0}
 
+/* NAV */
+nav
+{
+	position: fixed;
+	height: auto;
+	min-width: 100%;
+	background-color: #ffffff;
+	z-index: 5;
+	display: none;
+}
+
+nav p
+{
+	margin: 0 0 0 30px;
+	text-transform: uppercase;
+	float: left;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: 800;
+	padding: 10px 0 0 0;
+}
+
+nav b
+{
+	background-color: #6ae2c7;
+	color: #ffffff;
+}
+
+nav ul
+{
+	float: right;
+	margin: 10px 30px;
+}
+
+nav li
+{
+	float: left;
+	display: inline;
+	list-style-type: none;
+	color: #545454;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 0 10px;
+	font-size: 15px;
+}
+
+nav a
+{
+	text-decoration: none;
+	color: #545454;
+}
+
+nav a img {
+	width: 12em; 
+	float:left; 
+	margin: 10px 30px
+}
+
+nav li a:before
+{
+	color: #545454;
+	content: "";
+  	position: absolute;
+  	width: 100%;
+  	height: 3px;
+  	bottom: 0;
+  	left: 0;
+  	background: #000000;
+  	visibility: hidden;
+  	border-radius: 5px;
+  	transform: scaleX(0);
+  	transition: .25s linear;
+}
+
+nav li a:hover:before,
+nav li a:focus:before 
+{
+	color: #4AAFF0;
+	background-color: #4AAFF0;
+	transform: scaleX(1);
+	visibility: visible;
+}
+
 /*-------------------------------------------------------------------------------------------------*/
 /* Masonry
 /*-------------------------------------------------------------------------------------------------*/
@@ -598,6 +681,11 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 
 	.footer_left {text-align:center; padding: 10px 0}
     .footer_right {text-align:center; padding: 10px 0}
+
+    nav a img
+{
+	display: none;
+}
 }
 
 @media screen and (max-width: 740px){
@@ -610,6 +698,11 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
     
     .footer_left {text-align:center; padding: 10px 0}
     .footer_right {text-align:center; padding: 10px 0}
+
+    nav a img
+{
+	display: none;
+}
 }
 
 @media screen and (max-width: 490px){ 
@@ -640,5 +733,10 @@ ul.flyout li a:hover, .nav-bar li ul li a:hover { background: #151515; color: #f
 
 	.footer_left {text-align:center; padding: 10px 0}
     .footer_right {text-align:center; padding: 10px 0}
+
+    nav a img
+{
+	display: none;
+}
 }
 
