@@ -14,9 +14,10 @@
   <!-- Google fonts -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,600,800|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
 
-  <title>Assembly 2019 Project: AI Blindspot</title>
+  <title>AI Blindspot: A Discovery Process for preventing, detecting, and mitigating bias in AI systems</title>
 
   <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="stylesheets/foundation.min.css">
   <link rel="stylesheet" href="stylesheets/main.css">
   <link rel="stylesheet" href="stylesheets/tile.css">
@@ -30,12 +31,10 @@
         
         <header style="background-color:#1F2345">
               <h1 class="heading_largesize"><img src="images/ai_blindspot_logo_white_1000.png" style="align:center;"></h1>
-              <!-- <div><img src="images/ai_blindspot_logo_white_1000.png" style="align:center;"></div> -->
               <center><h3 style="align-content:center;">
               <span style="color:white;">A discovery process for spotting unconscious biases and structural inequalities in AI systems
               </span>
               </h3>
-              <!-- <div style="width:80%"><a href="images/AI_Cards_2019.pdf" class="button primary medium radius">Download Cards &raquo;</a></div> -->
             </center>
         </header>
         
@@ -52,6 +51,8 @@
     </p>
     <br/>
   <img src="images/0_ai_blindspot_discovery_process.png" style="align:center;">
+  <br>
+  <br>
   </div>
 </div>
 
@@ -93,19 +94,33 @@
       <div class="row"> 
       <div class="six columns" style="align: left;">
         <h1 style="color:white"><b>AI Blindspot Cards</b></h1>
+        <br>
       </div>
 
       <div class="six columns" style="align: right;">
           <div align="right">
-              <br><br>
+            <br><br>
             <a href="images/AI_Cards_2019.pdf" class="button primary medium radius">Download Cards (PDF) &raquo;</a>
             <br><br>
           </div>
       </div>
 
-      <div class="row"> 
-
+        <div class="w3-content w3-display-container">
+        <img class="mySlides" src="images/ai_cards_grass.jpg">
+        <img class="mySlides" src="images/ai_cards_grass_1.jpg">
+        <img class="mySlides" src="images/ai_cards_grass_2.jpg">
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+          <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+          <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
       </div>
+
+          
+          <br>
+          <br>
 
 
 <div class="content">
@@ -218,8 +233,6 @@
         </div>
     </a>
 </div>
-
-
       
     </section>
       
@@ -241,10 +254,10 @@
              
              <div class="four columns">
                <h3><b>COPYRIGHT</b></h3>
-               <center>
-                  <div style="align:center;padding-bottom:6px;"><a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by" target="_blank"><img src="images/1_creative_commons.png"></a></div>
-                </center>
                <p style="font-size: medium">This work is licensed under a Creative Commons Attribution 4.0 International License.</p>      
+              <center>
+                <div style="align:center;padding-bottom:6px;"><a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by" target="_blank"><img src="images/1_creative_commons.png"></a></div>
+              </center>
              </div>
         
              <div class="four columns">
@@ -253,7 +266,7 @@
                     <a href="https://www.instagram.com/aiblindspots/" class="lsf-icon" style="font-size:16px;" title="instagram">Instagram</a> 
                     <br>
                     <a href="https://tinyletter.com/aiblindspot" class="lsf-icon" style="font-size:16px" style="font-size:16px;" title="mail">Email Newsletter</a>
-                    <div style="margin-top:10px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSddPQ2-klpldUMTjKlE4rYxYtYVbEIuRzvhySAydlMPAIBo3w/viewform?usp=sf_link" class="button primary small radius">Send Feedback</a></div>    
+                    <div style="margin-top:10px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSddPQ2-klpldUMTjKlE4rYxYtYVbEIuRzvhySAydlMPAIBo3w/viewform?usp=sf_link" class="button primary medium radius">Send Feedback</a></div>    
                  </p>
                  
             </div>
@@ -270,6 +283,35 @@
               <a href="https://cyber.harvard.edu/" target="_blank"><img src="images/bkc_black_logo.png" /></a>
           </div>
       </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-white", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-white";
+    }
+    </script>
 
 </body>
 </html>

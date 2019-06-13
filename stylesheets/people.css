@@ -31,8 +31,10 @@ section#cohort {
 }
 
 #cohort div.profile p {
-    font-family: "EB Garamond", Garamond;
-    font-size: 20px;
+    /*font-family: "EB Garamond", Garamond;*/
+    font-family: inherit;
+    line-height:1.3em;
+    font-size: medium;
     margin: 0 0 0 250px;
 }
 
@@ -46,7 +48,8 @@ section#cohort {
 
 #people #cohort ul li, ul.cohortlist li {
     margin: 0 0 0 30px;
-    font-family: "EB Garamond", Garamond;
+    /*font-family: "EB Garamond", Garamond;*/
+    font-family: inherit;
     font-size: 20px;
     display: block;
     padding: 5px 0 5px 0;
@@ -62,6 +65,19 @@ section#cohort {
     margin: 10px 20px 10px 0;
 }
 
+div.acknowledgement h4{
+    font-size: 30px;
+    margin: 20px 0 20px 0;
+}
+
+div.acknowledgement p{
+    line-height: 1.3em;
+    font-size: medium;
+}
+
+div.page_title{
+    padding: 0 0 0 12px
+}
 
 @media screen and (max-width: 800px) {
   section#cohort {
@@ -81,8 +97,10 @@ section#cohort {
     text-align: center;
 }
 #cohort div.profile p {
-    font-family: "EB Garamond", Garamond;
-    font-size: 20px;
+    /*font-family: "EB Garamond", Garamond;*/
+    font-family: inherit;
+    font-size: medium;
+    line-height:1.3em;
     margin: 0 5% 0 5%;
     text-align:left;
 }
@@ -105,8 +123,21 @@ section#cohort {
     text-align: center;
 }
 #cohort div.profile p {
-    font-family: "EB Garamond", Garamond;
-    font-size: 20px;
+    /*font-family: "EB Garamond", Garamond;*/
+    font-family: inherit;
+    font-size: medium;
+    line-height:1.3em;
+    margin: 0 5% 0 5%;
+    text-align:left;
+}
+div.acknowledgement {
+    text-align: center;
+    margin: 3% 0;
+}
+
+div.acknowledgement p{
+   font-size: medium;
+    line-height:1.3em;
     margin: 0 5% 0 5%;
     text-align:left;
 }

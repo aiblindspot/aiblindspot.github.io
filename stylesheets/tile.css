@@ -169,7 +169,7 @@ div.icon > img {
   padding: 0 2em;
 }
 .back .button {
-  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+  background: #4AAFF0;
 }
 .back .button:before {
   box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
@@ -201,7 +201,7 @@ div.icon > img {
   font-weight: bold;
   color: #fff;
   padding: .5em 1em;
-  border-radius: 100px;
+  border-radius: 3px;
   font: inherit;
   border: none;
   position: relative;
