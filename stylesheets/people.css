@@ -104,6 +104,18 @@ div.page_title{
     margin: 0 5% 0 5%;
     text-align:left;
 }
+div.acknowledgement {
+    text-align: center;
+    margin: 3% 0;
+    clear: both;
+}
+
+div.acknowledgement p{
+   font-size: medium;
+    line-height:1.3em;
+    margin: 0 5% 0 5%;
+    text-align:left;
+}
 }
 @media screen and (max-width: 500px) {
   section#cohort {
@@ -133,6 +145,7 @@ div.page_title{
 div.acknowledgement {
     text-align: center;
     margin: 3% 0;
+    clear: both;
 }
 
 div.acknowledgement p{
