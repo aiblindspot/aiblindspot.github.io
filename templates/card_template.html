@@ -1,0 +1,77 @@
+{% extends "base_template.html" %}
+
+<!-- header title -->
+{% block title %}
+	{{card_title}}
+{% endblock title %}
+
+
+<!-- title for the card page (note: colored based on the overarching category of the card)-->
+{% block card_title %}
+	
+	<h2 style="font-weight: bold;font-size:350%;color:{{stage_color_dict.get(stage)}}">
+		{{card_title}}
+	</h2>
+	<div style="font-size:120%;margin-top:-10px;margin-bottom:2px;">
+		{% for key, value in stage_color_dict.items() %}
+			{% if key == stage %}
+				<b><span style="color:{{value}}; padding-left:10px; padding-right:10px">{{key}}</span></b>
+			{% else %}
+				<span style="color:{{value}};font-weight: 300; padding-left:10px; padding-right:10px">{{key}}</span>
+			{% endif %}
+
+		{% endfor %}
+	</div>
+{% endblock card_title %}
+
+
+<!-- headline under the title with brief desc of the blindspot -->
+{% block headline %}
+	{{headline}}
+{% endblock headline %}
+
+
+<!-- list of have you considered bullet points -->
+{% block considered_list %}
+	<ul style="font-size:100%">
+	    {% for bullet_point in considered_list %}
+	    	<li>{{bullet_point}}</li>
+	    {% endfor %}
+    </ul>
+
+{% endblock considered_list %}
+
+
+<!-- case study text and bullet ooints if any -->
+{% block case_study %}
+	<p>{{case_study}}</p>
+
+	<!-- case study bullet ooints if any; not all case studies have bullet points; fed in as tuple with first element as URL and second as the text-->
+	{% if (case_study_list is defined) and case_study_list %}
+		<ul style="font-size:100%;margin-left:12px;margin-top:-15px">
+			{% for case_study_bullet_point in case_study_list %}
+		    	<li><a href="{{case_study_bullet_point[0]}}">{{case_study_bullet_point[1]}}</a></li>
+		    {% endfor %}
+		</ul>    	
+	{% endif %}
+{% endblock case_study %}
+
+
+<!-- list of people to engage with -->
+{% block engaged_list %}
+	<ul style="font-size:100%">
+		{% for bullet_point in engaged_list %}
+	    	<li>{{bullet_point}}</li>
+	    {% endfor %}
+	</ul>
+{% endblock engaged_list %}
+
+
+<!-- resources list -->
+{% block resource_list %}
+	<ul style="font-size:100%">
+		{% for resource_bullet_point in resource_list %}
+	    	<li><a href="{{resource_bullet_point[0]}}">{{resource_bullet_point[1]}}</a></li>
+	    {% endfor %}
+	</ul>
+{% endblock resource_list %}
